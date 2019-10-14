@@ -23,7 +23,7 @@ sudo make install
 # Configure
 printf "Configuring PHPRedis!\n"
 
-echo "extension=redis.so" > sudo nano /etc/php/$PHP_VERSION/mods-available/redis.ini
+sudo echo "extension=redis.so" > /etc/php/$PHP_VERSION/mods-available/redis.ini
 sudo ln -s /etc/php/$PHP_VERSION/mods-available/redis.ini /etc/php/$PHP_VERSION/fpm/conf.d/30-redis.ini
 sudo ln -s /etc/php/$PHP_VERSION/mods-available/redis.ini /etc/php/$PHP_VERSION/cli/conf.d/30-redis.ini
 
